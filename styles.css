@@ -81,7 +81,7 @@ header nav ul li a:hover {
   #hero {
     background-size: cover; /* Ensure the image fills the space */
     width: 100vh;
-    height: 50vh; /* Adjust hero height for mobile */
+    height: 100vh; /* Adjust hero height for mobile */
     background-repeat: no-repeat;
     background-position: center; /* Center image on smaller screens */
     opacity: 0.5; /* Maintain transparency */
