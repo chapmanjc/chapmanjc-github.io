@@ -44,7 +44,7 @@ header nav ul li a:hover {
 /* Hero Section */
 #hero {
   background: url('hero.jpg') no-repeat center center / cover;
-  background-size: 30%; /* Desktop view */
+  background-size: 50%; /* Desktop view */
   color: #fff;
   text-align: center;
   width: 100vw;
@@ -78,9 +78,9 @@ header nav ul li a:hover {
 }
 
 /* Media Query for Mobile */
-@media (max-width: 768px) {
+@media (max-width: 1768px) {
   #hero {
-    background-size: 100%; /* Ensure the image fills the space */
+    background-size: cover; /* Ensure the image fills the space */
     width: 50vh;
     height: 100vh; /* Adjust hero height for mobile */
     background-repeat: no-repeat;
