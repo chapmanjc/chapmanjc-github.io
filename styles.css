@@ -79,7 +79,7 @@ header nav ul li a:hover {
 /* Media Query for Mobile */
 @media (max-width: 768px) {
   #hero {
-    background-size: cover; /* Ensure the image fills the space */
+    background-size: 100%; /* Ensure the image fills the space */
     width: 100vh;
     height: 100vh; /* Adjust hero height for mobile */
     background-repeat: no-repeat;
