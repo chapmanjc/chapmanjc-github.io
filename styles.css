@@ -40,31 +40,62 @@ header nav ul li a:hover {
   color: #ffa500;
 }
 
+/* Hero Section */
 #hero {
   background: url('hero.jpg') no-repeat center center / cover;
-  background-size: 30%;
-  opacity: .5;
+  background-size: 30%; /* Desktop view */
   color: #fff;
   text-align: center;
-  height: 80vh; /* Reduce to only 10% of the viewport height */
-  max-height: 500px; /* Limit the maximum height to 150px */
+  width: 100vw;
+  height: 50vh; /* Full height for desktop */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 0.5rem; /* Add some padding for spacing */
-  overflow: auto; /* Clip any overflowing content */
+  padding: 0.5rem;
+  opacity: 0.5; /* Maintain transparency */
 }
 
 #hero .hero-content h1 {
-  font-size: 3rem; /* Smaller headline */
+  font-size: 3rem; /* Headline size */
   margin: 0;
+  text-shadow: 
+    -1px -1px 0 black,
+     1px -1px 0 black,
+    -1px  1px 0 black,
+     1px  1px 0 black; /* Black text outline */
 }
 
 #hero .hero-content p {
-  font-size: 1.5rem; /* Smaller subtext */
+  font-size: 1.5rem; /* Subtext size */
   margin-top: 0.5rem;
+  text-shadow: 
+    -1px -1px 0 black,
+     1px -1px 0 black,
+    -1px  1px 0 black,
+     1px  1px 0 black; /* Black text outline */
 }
+
+/* Media Query for Mobile */
+@media (max-width: 768px) {
+  #hero {
+    background-size: cover; /* Ensure the image fills the space */
+    height: 50vh; /* Adjust hero height for mobile */
+    background-repeat: no-repeat;
+    background-position: center; /* Center image on smaller screens */
+    opacity: 0.5; /* Maintain transparency */
+  }
+
+  #hero .hero-content h1 {
+    font-size: 2rem; /* Adjust headline size for mobile */
+  }
+
+  #hero .hero-content p {
+    font-size: 1rem; /* Adjust subtext size for mobile */
+  }
+}
+
+/* Section Styling */
 section {
   padding: 3rem 1rem;
 }
@@ -98,10 +129,15 @@ section p {
 .listing img {
   width: 100%;
   height: 200px;
-  opacity: .5;
   object-fit: cover;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  opacity: 0.5; /* Image transparency */
+  transition: opacity 0.3s; /* Smooth hover effect */
+}
+
+.listing img:hover {
+  opacity: 1; /* Remove transparency on hover */
 }
 
 /* Footer */
@@ -117,11 +153,18 @@ footer p {
   margin: 0;
 }
 
-.outlined-text {
-  color: white; /* Main text color */
-  text-shadow: 
-    -1px -1px 0 black, /* Top-left shadow */
-     1px -1px 0 black, /* Top-right shadow */
-    -1px  1px 0 black, /* Bottom-left shadow */
-     1px  1px 0 black; /* Bottom-right shadow */
+/* Media Query for Mobile */
+@media (max-width: 768px) {
+  #hero {
+    height: 50vh; /* Reduce hero height on mobile */
+    opacity: 0.5; /* Maintain transparency */
+  }
+
+  .listing img {
+    opacity: 0.5; /* Consistent transparency for mobile */
+  }
+
+  header .logo {
+    max-width: 150px; /* Smaller logo for mobile */
+  }
 }
