@@ -80,6 +80,7 @@ header nav ul li a:hover {
 @media (max-width: 768px) {
   #hero {
     background-size: cover; /* Ensure the image fills the space */
+    width: 100vh;
     height: 50vh; /* Adjust hero height for mobile */
     background-repeat: no-repeat;
     background-position: center; /* Center image on smaller screens */
